@@ -19,7 +19,8 @@ def mean_squared_error(x, y, w):
     :return: błąd średniokwadratowy pomiędzy wyjściami y oraz wyjściami
      uzyskanymi z wielowamiu o parametrach w dla wejść x
     """
-    pass
+    pred = polynomial(x, w)
+    return ((y - pred) ** 2).mean()
 
 
 def design_matrix(x_train, M):
@@ -28,7 +29,7 @@ def design_matrix(x_train, M):
     :param M: stopień wielomianu 0,1,2,...
     :return: funkcja wylicza Design Matrix Nx(M+1) dla wielomianu rzędu M
     """
-    pass
+    return np.vander(x_train.reshape(-1), M + 1, increasing=True)
 
 
 def least_squares(x_train, y_train, M):
@@ -39,7 +40,10 @@ def least_squares(x_train, y_train, M):
     :return: funkcja zwraca krotkę (w,err), gdzie w są parametrami dopasowanego 
     wielomianu, a err to błąd średniokwadratowy dopasowania
     """
-    pass
+    vander_matrix = design_matrix(x_train, M)
+    weights = np.linalg.inv(vander_matrix.T @ vander_matrix) @ vander_matrix.T @ y_train
+    error = mean_squared_error(x_train, y_train, weights)
+    return weights, error
 
 
 def regularized_least_squares(x_train, y_train, M, regularization_lambda):
@@ -52,7 +56,13 @@ def regularized_least_squares(x_train, y_train, M, regularization_lambda):
     wielomianu zgodnie z kryterium z regularyzacją l2, a err to błąd 
     średniokwadratowy dopasowania
     """
-    pass
+    vander_matrix = design_matrix(x_train, M)
+    identity = np.eye(M + 1)
+    weights = np.linalg.inv(
+        vander_matrix.T @ vander_matrix + identity * regularization_lambda
+    ) @ vander_matrix.T @ y_train
+    error = mean_squared_error(x_train, y_train, weights)
+    return weights, error
 
 
 def model_selection(x_train, y_train, x_val, y_val, M_values):
@@ -67,7 +77,19 @@ def model_selection(x_train, y_train, x_val, y_val, M_values):
     ciągu walidacyjnym, train_err i val_err to błędy na sredniokwadratowe na 
     ciągach treningowym i walidacyjnym
     """
-    pass
+    models = list()
+    for m in M_values:
+        weights, train_loss = least_squares(x_train, y_train, m)
+        val_loss = mean_squared_error(x_val, y_val, weights)
+        models.append(
+            (
+                weights,
+                train_loss,
+                val_loss
+            )
+        )
+    sorted_models = sorted(models, key=lambda x: x[2])
+    return sorted_models[0]
 
 
 def regularized_model_selection(x_train, y_train, x_val, y_val, M, lambda_values):
@@ -85,4 +107,17 @@ def regularized_model_selection(x_train, y_train, x_val, y_val, M, lambda_values
     na ciągach treningowym i walidacyjnym. regularization_lambda to najlepsza
     wartość parametru regularyzacji
     """
-    pass
+    models = list()
+    for regularization_lambda in lambda_values:
+        weights, train_loss = regularized_least_squares(x_train, y_train, M, regularization_lambda)
+        val_loss = mean_squared_error(x_val, y_val, weights)
+        models.append(
+            (
+                weights,
+                train_loss,
+                val_loss,
+                regularization_lambda
+            )
+        )
+    sorted_models = sorted(models, key=lambda x: x[2])
+    return sorted_models[0]

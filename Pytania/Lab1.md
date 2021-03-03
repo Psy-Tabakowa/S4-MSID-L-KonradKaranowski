@@ -106,7 +106,7 @@ Selekcja modelu polega na stworzeniu kilku modeli z różnymi hiperparametrami i
 Ogólnie protsze jest zastosowanie tego samego kryterium, ponieważ nie musimy wykonywać dodatkowych obliczeń, ale w praktyce: to zależy.
 
 ### 8. Kiedy liniowe zadanie najmniejszych kwadratów ma jednoznaczne rozwiązanie, a kiedy istnieje wiele rozwiązań? Jak jest w przypadku zadania najmniejszych kwadratów z regularyzacją?
-Rozwiązanie ma jednoznaczne rozwiązanie, kiedy rank(X) = M (macierz nie jest osobliwa).
+Rozwiązanie ma jednoznaczne rozwiązanie, kiedy rank(X^T*X) = M (macierz nie jest osobliwa).
 W przypadku równania z regularyzacją, zawsze istnieje jednoznaczne rozwiązanie.
 
 ### 9. Zapisać wektor cech φ dla wielomianu M-tego rzędu.

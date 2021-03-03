@@ -5,4 +5,5 @@ Rozwiązania zadań do laboratorium z Metod Systemowych i Decyzyjnych prowadzony
 [1. Laboratorium 1 - Regresja liniowa](Pytania/Lab1.md)
 <br>
 [2. Laboratorium 2 - KNN i Naive Bayes](Pytania/Lab2.md)
+<br>
 [3. Laboratorium 3 - Regresja Logistyczna](Pytania/Lab3.md)

@@ -54,8 +54,7 @@ Otrzymujemy następujący wzór:
 
 Przekształcamy równanie do postaci:
 <br>
-![image](https://cdn.mathpix.com/snip/images/5h5WGLjqlAGVUVqycICcKOlgjpEBKvBhN_4QRbtR2D4.original.fullsize.png)
-
+![image](https://cdn.mathpix.com/snip/images/Bj-l1j08x2BSCPQLy_cCWWq6bs-Z3JXiEqrxM88pRMs.original.fullsize.png)
 Otrzymujemy ostateczny wzór:
 <br>
 ![image](https://cdn.mathpix.com/snip/images/2m0H_Y-u5KLunwou9czqoON-vDnNoAXfPZWbkWg2Q2k.original.fullsize.png)
@@ -75,7 +74,7 @@ Liczymy pochodną:
 
 Przekształcamy:
 <br>
-![image](https://cdn.mathpix.com/snip/images/yVtqn4Qe7g-uRgvtLfrgWVJ9BIRM4VIZRB1DysShiec.original.fullsize.png)
+![image](https://cdn.mathpix.com/snip/images/8V1MG0yWz4-cc9tvgYqZw8K_UQDOlLmpGiWateNiNUc.original.fullsize.png)
 
 Otrzymujemy nasze piękne rozwiązanie równania:
 <br>
@@ -106,8 +105,11 @@ Selekcja modelu polega na stworzeniu kilku modeli z różnymi hiperparametrami i
 Ogólnie protsze jest zastosowanie tego samego kryterium, ponieważ nie musimy wykonywać dodatkowych obliczeń, ale w praktyce: to zależy.
 
 ### 8. Kiedy liniowe zadanie najmniejszych kwadratów ma jednoznaczne rozwiązanie, a kiedy istnieje wiele rozwiązań? Jak jest w przypadku zadania najmniejszych kwadratów z regularyzacją?
+Rozwiązanie ma jednoznaczne rozwiązanie, kiedy rank(X) = M (macierz nie jest osobliwa).
+W przypadku równania z regularyzacją, zawsze istnieje jednoznaczne rozwiązanie.
 
 ### 9. Zapisać wektor cech φ dla wielomianu M-tego rzędu.
+![image](https://cdn.mathpix.com/snip/images/HvN_jNxIPPOvyympIVnOFrd0vLXIwOfKaKoshnKuT3w.original.fullsize.png)
 
 ### 10. Co to jest parametr λ? Jak jego wartość wpływa na rozwiązanie?
 Lambda jest tzw. współczynnikiem regularyzacji. Regularyzację stosujemy, aby nasz model się nie overfittował. W naszym przypadku polega ona na penalizowaniu zbyt wysokich wag.

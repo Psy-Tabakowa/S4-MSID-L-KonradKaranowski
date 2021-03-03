@@ -55,6 +55,7 @@ Otrzymujemy następujący wzór:
 Przekształcamy równanie do postaci:
 <br>
 ![image](https://cdn.mathpix.com/snip/images/Bj-l1j08x2BSCPQLy_cCWWq6bs-Z3JXiEqrxM88pRMs.original.fullsize.png)
+
 Otrzymujemy ostateczny wzór:
 <br>
 ![image](https://cdn.mathpix.com/snip/images/2m0H_Y-u5KLunwou9czqoON-vDnNoAXfPZWbkWg2Q2k.original.fullsize.png)

@@ -88,7 +88,7 @@ Overfitting polega na nadmiernym dopasowaniu do danych (mówimy, że model posia
 ### 4. Co to jest underfitting? Wskazać na przykładzie dopasowania wielomianu.
 Underfitting polega na niedostatecznym dopasowaniu do danych (mówimy, że model posiada duże obciążenie). W efekcie model nie dopasowuje się dobrze do danych treningowych i nie radzi sobie z generalizacją (czyli jest beznadziejny).
 
-Tutaj przyład z [medium](https://medium.com/greyatom/what-is-underfitting-and-overfitting-in-machine-learning-and-how-to-deal-with-it-6803a989c76):
+Tutaj przykład z [medium](https://medium.com/greyatom/what-is-underfitting-and-overfitting-in-machine-learning-and-how-to-deal-with-it-6803a989c76):
 ![image](https://miro.medium.com/max/1125/1*_7OPgojau8hkiPUiHoGK_w.png)
 ### 5. Co to jest ciąg treningowy, walidacyjny, testowy? Jakie jest ich znaczenie.
 Dane dzielimy najczęściej na trzy zbiory:
@@ -103,7 +103,7 @@ Podział na te trzy ciągi jest bardzo istotny, ponieważ pozwala nam oceniać s
 Selekcja modelu polega na stworzeniu kilku modeli z różnymi hiperparametrami i wybraniu najlepszego. Kryterium może być inne np. przy klasyfikacji zamiast accuracy użyjemy F1 score.
 
 ### 7. Które z podejść do selekcji modelu jest prostsze do zastosowania w praktyce i dlaczego?
-Ogólnie protsze jest zastosowanie tego samego kryterium, ponieważ nie musimy wykonywać dodatkowych obliczeń, ale w praktyce: to zależy.
+Ogólnie prostsze jest zastosowanie tego samego kryterium, ponieważ nie musimy wykonywać dodatkowych obliczeń, ale w praktyce: to zależy.
 
 ### 8. Kiedy liniowe zadanie najmniejszych kwadratów ma jednoznaczne rozwiązanie, a kiedy istnieje wiele rozwiązań? Jak jest w przypadku zadania najmniejszych kwadratów z regularyzacją?
 Rozwiązanie ma jednoznaczne rozwiązanie, kiedy rank(X) = M (macierz X.T * X nie jest osobliwa).

@@ -110,7 +110,7 @@ Rozwiązanie ma jednoznaczne rozwiązanie, kiedy rank(X) = M (macierz X.T * X ni
 W przypadku równania z regularyzacją, zawsze istnieje jednoznaczne rozwiązanie.
 
 ### 9. Zapisać wektor cech φ dla wielomianu M-tego rzędu.
-![image](https://cdn.mathpix.com/snip/images/HvN_jNxIPPOvyympIVnOFrd0vLXIwOfKaKoshnKuT3w.original.fullsize.png)
+![image](https://cdn.mathpix.com/snip/images/sGkc8mDNLMG2ZlQJVXs6YrDxxLX4EBMlu2eKsQsvXOE.original.fullsize.png)
 
 ### 10. Co to jest parametr λ? Jak jego wartość wpływa na rozwiązanie?
 Lambda jest tzw. współczynnikiem regularyzacji. Regularyzację stosujemy, aby nasz model się nie overfittował. W naszym przypadku polega ona na penalizowaniu zbyt wysokich wag.

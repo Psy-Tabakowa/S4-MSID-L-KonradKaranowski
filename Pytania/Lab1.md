@@ -85,7 +85,7 @@ Otrzymujemy nasze piękne rozwiązanie równania:
 ### 3. Co to jest overfitting? Wskazać na przykładzie dopasowania wielomianu.
 Overfitting polega na nadmiernym dopasowaniu do danych (mówimy, że model posiada dużą wariancję). W efekcie model dobrze dopasowuje się do danych treningowych, ale słabo radzi sobie z generalizacją (czyli słabo sprawdza się w realnym zastosowaniu).
 
-### 4. Co to jestunderfitting? Wskazać na przykładzie dopasowania wielomianu.
+### 4. Co to jest underfitting? Wskazać na przykładzie dopasowania wielomianu.
 Underfitting polega na niedostatecznym dopasowaniu do danych (mówimy, że model posiada duże obciążenie). W efekcie model nie dopasowuje się dobrze do danych treningowych i nie radzi sobie z generalizacją (czyli jest beznadziejny).
 
 Tutaj przyład z [medium](https://medium.com/greyatom/what-is-underfitting-and-overfitting-in-machine-learning-and-how-to-deal-with-it-6803a989c76):

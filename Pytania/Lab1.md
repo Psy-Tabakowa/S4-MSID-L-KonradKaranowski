@@ -14,6 +14,7 @@ Oraz wektor wyników:
 Tworzymy design matrix X o wymiarach n x m z naszego wektora x:
 <br>
 ![image](https://cdn.mathpix.com/snip/images/qbKBp2fMvogd2mdRXlQXAJ4yn2meJf1Zk-x7Egg594Y.original.fullsize.png)
+
 Dobierzmy teraz wektor wag:
 <br>
 ![image](https://cdn.mathpix.com/snip/images/f3eGW-ultwEloc0q8TFcsPdM-jVk59hnKqiQQdOZzpQ.original.fullsize.png)

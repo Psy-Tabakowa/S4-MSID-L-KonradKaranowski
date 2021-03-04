@@ -13,15 +13,14 @@ Oraz wektor wyników:
 
 Tworzymy design matrix X o wymiarach n x m z naszego wektora x:
 <br>
-![image](https://cdn.mathpix.com/snip/images/HvN_jNxIPPOvyympIVnOFrd0vLXIwOfKaKoshnKuT3w.original.fullsize.png)
-
+![image](https://cdn.mathpix.com/snip/images/qbKBp2fMvogd2mdRXlQXAJ4yn2meJf1Zk-x7Egg594Y.original.fullsize.png)
 Dobierzmy teraz wektor wag:
 <br>
 ![image](https://cdn.mathpix.com/snip/images/f3eGW-ultwEloc0q8TFcsPdM-jVk59hnKqiQQdOZzpQ.original.fullsize.png)
 
 Teraz aby policzyć przewidziane wyniki wystarczy pomnożyć macierz X oraz w:
 <br>
-![image](https://cdn.mathpix.com/snip/images/FkPJzN0QGtrjM1ASfbqlrqDEv0iTwc4t0T3rE60-AIw.original.fullsize.png)
+![image](https://cdn.mathpix.com/snip/images/dB6fHaBppC_52cGmj8zAwkb0Un10PawoZsNaDB0_O0A.original.fullsize.png)
 
 Zapiszmy to ładniej i trzymajmy się tego:
 <br>
@@ -75,7 +74,7 @@ Liczymy pochodną:
 
 Przekształcamy:
 <br>
-![image](https://cdn.mathpix.com/snip/images/8V1MG0yWz4-cc9tvgYqZw8K_UQDOlLmpGiWateNiNUc.original.fullsize.png)
+![image](https://cdn.mathpix.com/snip/images/QDlKOUJRdnsRYOR_WGWEpvH5oM04L9UOqgXj3TXgI24.original.fullsize.png)
 
 Otrzymujemy nasze piękne rozwiązanie równania:
 <br>

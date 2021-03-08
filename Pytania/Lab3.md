@@ -52,10 +52,12 @@ Wartość progowa mówi nam od jakiego prawdopodobieństwa klasyfikujemy próbk�
 F measure to metryka służąca do oceny modelu, jest ona średnią harmoniczną dwóch wielkości: 
 * precision - mówi o tym, jak precyzyjnie nasz model wykrywa próbki pozytywne: 
 <br>
+  
 ![image](https://cdn.mathpix.com/snip/images/LRJ0HBwLsWtSsMUKqms07YH12t_rDieDalwVU6GoJeI.original.fullsize.png)
 
 * recall - mówi o tym, jak dużo próbek pozytywnych nie zostało wykrytych przez nasz model:
 <br>
+  
 ![image](https://cdn.mathpix.com/snip/images/XX5PrmEB2rCDoAEStLxj3ODr7Dw8wEoR6QMqxeUmc4E.original.fullsize.png)
 
 Gdzie:

@@ -7,6 +7,14 @@
 # --------------------------------------------------------------------------
 
 import numpy as np
+import functools
+
+
+# my utils
+def get_batches(x: np.ndarray, y: np.ndarray, n_batches):
+    indexes = np.arange(0, y.shape[0])
+    batches = np.array_split(indexes, n_batches)
+    return [(x[i], y[i]) for i in batches]
 
 
 def sigmoid(x):
@@ -16,7 +24,7 @@ def sigmoid(x):
     :param x: wektor wartości *x* do zaaplikowania funkcji sigmoidalnej Nx1
     :return: wektor wartości funkcji sigmoidalnej dla wartości *x* Nx1
     """
-    pass
+    return 1 / (1 + np.exp(-x))
 
 
 def logistic_cost_function(w, x_train, y_train):
@@ -29,7 +37,13 @@ def logistic_cost_function(w, x_train, y_train):
     :return: krotka (log, grad), gdzie *log* to wartość funkcji logistycznej,
         a *grad* jej gradient po parametrach *w* Mx1
     """
-    pass
+    n_samples, _ = x_train.shape
+    y_pred = sigmoid(x_train @ w)
+    cost = - (y_train * np.log(y_pred) + (1 - y_train) * np.log(1 - y_pred)).mean()
+    # calculate gradients with respect to weights
+    error = (y_pred - y_train)
+    grad = (x_train.T @ error) / n_samples
+    return cost, grad
 
 
 def gradient_descent(obj_fun, w0, epochs, eta):
@@ -48,7 +62,13 @@ def gradient_descent(obj_fun, w0, epochs, eta):
         punkt *w*, a *log_values* to lista wartości funkcji celu w każdej
         epoce (lista o długości *epochs*)
     """
-    pass
+    cost = list()
+    for i in range(epochs):
+        _, grad = obj_fun(w0)
+        w0 -= eta * grad
+        cost_epoch, _ = obj_fun(w0)
+        cost.append(cost_epoch)
+    return w0, cost
 
 
 def stochastic_gradient_descent(obj_fun, x_train, y_train, w0, epochs, eta, mini_batch):
@@ -71,7 +91,16 @@ def stochastic_gradient_descent(obj_fun, x_train, y_train, w0, epochs, eta, mini
         punkt *w*, a *log_values* to lista wartości funkcji celu dla całego
         zbioru treningowego w każdej epoce (lista o długości *epochs*)
     """
-    pass
+    # calculate batch size
+    n_batches = y_train.shape[0] // mini_batch
+    cost = list()
+    for i in range(epochs):
+        for x, y in get_batches(x_train, y_train, n_batches):
+            _, grad = obj_fun(w0, x, y)
+            w0 -= eta * grad
+        cost_epoch, _ = obj_fun(w0, x_train, y_train)
+        cost.append(cost_epoch)
+    return w0, cost
 
 
 def regularized_logistic_cost_function(w, x_train, y_train, regularization_lambda):
@@ -86,7 +115,17 @@ def regularized_logistic_cost_function(w, x_train, y_train, regularization_lambd
     :return: krotka (log, grad), gdzie *log* to wartość funkcji logistycznej
         z regularyzacją l2, a *grad* jej gradient po parametrach *w* Mx1
     """
-    pass
+    n_samples, _ = x_train.shape
+    y_pred = sigmoid(x_train @ w)
+    cost = - (y_train * np.log(y_pred) + (1 - y_train) * np.log(1 - y_pred)).mean()
+    cost += 0.5 * regularization_lambda * (np.transpose(w[1:]) @ w[1:]).item()
+    # calculate value of gradients with respect to weights
+    error = (y_pred - y_train)
+    # nie wiem jak to napisać sensownie, może coś wymyślę
+    regularization_grad = regularization_lambda * w
+    regularization_grad[0] = .0
+    grad = (x_train.T @ error) / n_samples + regularization_grad
+    return cost, grad
 
 
 def prediction(x, w, theta):
@@ -99,7 +138,8 @@ def prediction(x, w, theta):
     :param theta: próg klasyfikacji z przedziału [0,1]
     :return: wektor predykowanych etykiet ze zbioru {0, 1} Nx1
     """
-    pass
+    y_pred = sigmoid(x @ w)
+    return np.where(y_pred > theta, 1, 0)
 
 
 def f_measure(y_true, y_pred):
@@ -111,7 +151,10 @@ def f_measure(y_true, y_pred):
     :param y_pred: wektor etykiet predykowanych przed model Nx1
     :return: wartość miary F (F-measure)
     """
-    pass
+    tp = np.logical_and(y_true == 1, y_pred == 1).sum()
+    fp = np.logical_and(y_true == 0, y_pred == 1).sum()
+    fn = np.logical_and(y_true == 1, y_pred == 0).sum()
+    return 2 * tp / (2 * tp + fp + fn + 1e-10)
 
 
 def model_selection(x_train, y_train, x_val, y_val, w0, epochs, eta, mini_batch, lambdas, thetas):
@@ -139,4 +182,29 @@ def model_selection(x_train, y_train, x_val, y_val, w0, epochs, eta, mini_batch,
         *w* to parametry najlepszego modelu, a *F* to macierz wartości miary F
         dla wszystkich par *(lambda, theta)* #lambda x #theta
     """
-    pass
+    f_score_matrix = list()
+    weights = list()
+    for reg_lambda in lambdas:
+        f_score_vector = list()
+        w, _ = stochastic_gradient_descent(
+            functools.partial(
+                regularized_logistic_cost_function,
+                regularization_lambda=reg_lambda),
+            x_train,
+            y_train,
+            np.copy(w0),
+            epochs,
+            eta,
+            mini_batch
+        )
+        weights.append(w)
+        for theta in thetas:
+            y_pred = prediction(x_val, w, theta)
+            f1_score = f_measure(y_val, y_pred)
+            f_score_vector.append(f1_score)
+        f_score_matrix.append(f_score_vector)
+    idx = np.argmax(f_score_matrix)
+    return lambdas[idx // len(thetas)], thetas[idx - len(thetas) * (idx // len(thetas))], weights[idx // len(thetas)], f_score_matrix
+
+
+

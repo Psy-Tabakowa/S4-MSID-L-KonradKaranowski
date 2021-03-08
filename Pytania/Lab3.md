@@ -17,7 +17,7 @@ Otrzymujemy ostateczną postać:
 ![](https://cdn.mathpix.com/snip/images/xVGGL0mQGq078qAgTkPw3tRxnhfUyAmM2vlHqnuNDkQ.original.fullsize.png)
 
 ### 2.  Wyznaczyć gradient funkcji celu lub gradient funkcji celu z regularyzacją.
-
+Na początku wprowadzę swoje oznaczenia, bo uważam, że są lepsze
 
 
 ### 3.  Co to jest model regresji logistycznej? W jaki sposób modeluje warunkowe prawdopodobieństwo?
@@ -25,19 +25,19 @@ Aby zrozumieć regresję logistyczną, należy wprowadzić pojęcie ilorazu szan
 <br>
 ![](https://cdn.mathpix.com/snip/images/p6Ys96ZlsjacHloA5JHCNYqBNF_g9MCR6vWraqzj094.original.fullsize.png)
 
-W praktyce stosuje się tzw. funkcję logitową: [0, 1] => R:
+W praktyce stosuje się tzw. funkcję logitową: (0, 1) => R:
 <br>
 ![](https://cdn.mathpix.com/snip/images/DHqOMb8vtY-F4SLNHw18h5R2QDEVhQP9btEIQFUn4LE.original.fullsize.png)
 
 
-Funkcja ta jest odwracalna. Jej odwrotnością jest funkcja sigmoid σ: R => [0, 1]:
+Funkcja ta jest odwracalna. Jej odwrotnością jest funkcja sigmoid σ: R => (0, 1):
 <br>
 ![image](https://cdn.mathpix.com/snip/images/RN7iHSNmfdNp1Krr-aVO-9F5upg0XWrigVR1VOWZ9wY.original.fullsize.png)
 
 
 Funkcja sigmoidalna pozwala nam policzyć prawdopodobieństwo warunkowe wystąpienia zdarzenia pozytywnego pod warunkiem wektora cech x, z parametrem w:
 <br>
-![image](https://cdn.mathpix.com/snip/images/c4ZhBqGlglb3ZHoRoPI0_feQgHYJSmKW0LG1oULKHV4.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/c4ZhBqGlglb3ZHoRoPI0_feQgHYJSmKW0LG1oULKHV4.original.fullsize.png)
 
 
 Regresja logistyczna jest więc metodą, która pozwala nam modelować prawdopodobieństwo przynależności próbki x do klasy pozytywnej, pod warunkiem próbki x.
@@ -52,13 +52,13 @@ Wartość progowa mówi nam od jakiego prawdopodobieństwa klasyfikujemy próbk�
 F measure to metryka służąca do oceny modelu, jest ona średnią harmoniczną dwóch wielkości: 
 * precision - mówi o tym, jak precyzyjnie nasz model wykrywa próbki pozytywne: 
 <br>
+![](https://cdn.mathpix.com/snip/images/LRJ0HBwLsWtSsMUKqms07YH12t_rDieDalwVU6GoJeI.original.fullsize.png)
   
-![image](https://cdn.mathpix.com/snip/images/LRJ0HBwLsWtSsMUKqms07YH12t_rDieDalwVU6GoJeI.original.fullsize.png)
 
 * recall - mówi o tym, jak dużo próbek pozytywnych nie zostało wykrytych przez nasz model:
 <br>
+![](https://cdn.mathpix.com/snip/images/XX5PrmEB2rCDoAEStLxj3ODr7Dw8wEoR6QMqxeUmc4E.original.fullsize.png)
   
-![image](https://cdn.mathpix.com/snip/images/XX5PrmEB2rCDoAEStLxj3ODr7Dw8wEoR6QMqxeUmc4E.original.fullsize.png)
 
 Gdzie:
 TP - ilość próbek sklasyfikowanych jako pozytywne (w rzeczywistości będących pozytywnymi)
@@ -84,7 +84,7 @@ Dla zbyt dużych wartości η możemy przeskakiwać nad minimum globalnym (przyk
 
 
 ### 7.  Na czym polega detekcja obiektu na zdjęciu? Dlaczego jest to problem klasyfikacji?
-Detekcja obrazu na zdjęciu polega w naszym przypadku na przejrzeniu wybranych fragmentów obrazu i zakwalifikowaniu go jako zawierającego obiekt - 1 albo nie zawierającego obiektu - 2.
+Detekcja obrazu na zdjęciu polega w naszym przypadku na przejrzeniu wybranych fragmentów obrazu i zakwalifikowaniu go jako zawierającego obiekt - 1 albo nie zawierającego obiektu - 0.
 
 
 ### 8.  Dlaczego algorytm stochastycznego gradientu prostego zbiega znacznie szybciej? Jakie jest znaczenie wielkości mini-batcha dla zbieżności algorytmu?  Jak będzie zachowywał się dla małych mini-batchy, a jak dla dużych?
@@ -92,6 +92,7 @@ W algorytmie stochastycznego spadku wzdłuż gradientu zbiega szybciej, poniewa�
 
 
 ### 9.  W jaki sposób można dodać regularyzację L2 na parametry modelu regresji logistycznej? Jaki efekt wówczas osiągniemy? Kiedy konieczne jest stosowanie regularyzacji, a kiedy nie?
+Regularyzację L2 dodajemy w następujący sposób:
 
 
 

@@ -204,7 +204,8 @@ def model_selection(x_train, y_train, x_val, y_val, w0, epochs, eta, mini_batch,
             f_score_vector.append(f1_score)
         f_score_matrix.append(f_score_vector)
     idx = np.argmax(f_score_matrix)
-    return lambdas[idx // len(thetas)], thetas[idx - len(thetas) * (idx // len(thetas))], weights[idx // len(thetas)], f_score_matrix
+    idx_col = idx // len(thetas)
+    return lambdas[idx_col], thetas[idx - len(thetas) * idx_col], weights[idx_col], f_score_matrix
 
 
 

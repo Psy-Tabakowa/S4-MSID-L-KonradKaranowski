@@ -37,7 +37,7 @@ Funkcja ta jest odwracalna. Jej odwrotnością jest funkcja sigmoid σ: R => [0,
 
 Funkcja sigmoidalna pozwala nam policzyć prawdopodobieństwo warunkowe wystąpienia zdarzenia pozytywnego pod warunkiem wektora cech x, z parametrem w:
 <br>
-![](https://cdn.mathpix.com/snip/images/c4ZhBqGlglb3ZHoRoPI0_feQgHYJSmKW0LG1oULKHV4.original.fullsize.png)
+![image](https://cdn.mathpix.com/snip/images/c4ZhBqGlglb3ZHoRoPI0_feQgHYJSmKW0LG1oULKHV4.original.fullsize.png)
 
 
 Regresja logistyczna jest więc metodą, która pozwala nam modelować prawdopodobieństwo przynależności próbki x do klasy pozytywnej, pod warunkiem próbki x.
@@ -52,13 +52,11 @@ Wartość progowa mówi nam od jakiego prawdopodobieństwa klasyfikujemy próbk�
 F measure to metryka służąca do oceny modelu, jest ona średnią harmoniczną dwóch wielkości: 
 * precision - mówi o tym, jak precyzyjnie nasz model wykrywa próbki pozytywne: 
 <br>
-![](https://cdn.mathpix.com/snip/images/LRJ0HBwLsWtSsMUKqms07YH12t_rDieDalwVU6GoJeI.original.fullsize.png)
-  
+![image](https://cdn.mathpix.com/snip/images/LRJ0HBwLsWtSsMUKqms07YH12t_rDieDalwVU6GoJeI.original.fullsize.png)
 
 * recall - mówi o tym, jak dużo próbek pozytywnych nie zostało wykrytych przez nasz model:
 <br>
-![](https://cdn.mathpix.com/snip/images/XX5PrmEB2rCDoAEStLxj3ODr7Dw8wEoR6QMqxeUmc4E.original.fullsize.png)
-  
+![image](https://cdn.mathpix.com/snip/images/XX5PrmEB2rCDoAEStLxj3ODr7Dw8wEoR6QMqxeUmc4E.original.fullsize.png)
 
 Gdzie:
 TP - ilość próbek sklasyfikowanych jako pozytywne (w rzeczywistości będących pozytywnymi)

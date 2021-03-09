@@ -17,8 +17,51 @@ Otrzymujemy ostateczną postać:
 ![](https://cdn.mathpix.com/snip/images/xVGGL0mQGq078qAgTkPw3tRxnhfUyAmM2vlHqnuNDkQ.original.fullsize.png)
 
 ### 2.  Wyznaczyć gradient funkcji celu lub gradient funkcji celu z regularyzacją.
-Na początku wprowadzę swoje oznaczenia, bo uważam, że są lepsze
+Na początku bez regularyzacji:
+Wprowadźmy sobie oznaczenie, które pomoże nam uczynić rachunki bardziej czytelnymi:
+<br>
+![](https://cdn.mathpix.com/snip/images/5Lo185sozr0wc9FP6B-g3KOkQhZgHkweKZYnAmO1zJ4.original.fullsize.png)
 
+Przyda się też policzona już pochodna sigmoidu:
+<br>
+![](https://cdn.mathpix.com/snip/images/Tpy-gG0RdFc9To2im0gjzYVvmoZcPduMjxXQ3vd2WnQ.original.fullsize.png)
+
+Możemy policzyć pochodną sigmoidu po wagach, korzystając z naszego poprzedniego rozwiązania:
+![](https://cdn.mathpix.com/snip/images/F1fbrIHNUxRs6rERMOgIZqQyoorMU75JK8hShDqGN5k.original.fullsize.png)
+
+Nasza funkcja kosztu jest dana wzorem:
+<br>
+![](https://cdn.mathpix.com/snip/images/k3UBm7BNxePWKSsDXKrQyCkgjEJCM1o-CY4iXFSD-vE.original.fullsize.png)
+
+Liczymy gradient:
+![](https://cdn.mathpix.com/snip/images/SnFApz_-iZR8-nvQH2ZxjKKD4Tv1IddO0X-3ZV0rolg.original.fullsize.png)
+
+Rozbijmy to na dwie części:
+<br>
+![](https://cdn.mathpix.com/snip/images/BowbgRWMjBl205U1CGGeMiGOHD99OZ3DzFh4GA5o6ZI.original.fullsize.png)
+<br>
+![](https://cdn.mathpix.com/snip/images/Zeqmm47i1XveEM8aQ0LengKS-tIL1UiM0rc3s5UUYok.original.fullsize.png)
+
+Całość podstawiamy do wzoru i przekształcamy:
+![](https://cdn.mathpix.com/snip/images/AZfJtIm6l31IataRtBVC6FPV1-cbXDXk6bRqUfs6PpA.original.fullsize.png)
+
+To jest już łatwo zapisać w postaci iloczynu macierzowego.
+
+Dla regresji z regularyzacją funkcja kosztu wygląda następująco:
+<br>
+![](https://cdn.mathpix.com/snip/images/tOWGZf-I9FI_tB769YAIBN1oS2t2vd9698jr21DA16g.original.fullsize.png)
+
+Gradient możemy policzyć w następujący spos:
+<br>
+![image](https://cdn.mathpix.com/snip/images/xze7Sme7JjDV1_0lBr4T13BDFEUclAO5SgQPtWinSTo.original.fullsize.png)
+
+Wprowadźmy oznaczenie:
+<br>
+![image](https://cdn.mathpix.com/snip/images/K1qCjAlytlg6ZeuMq-jKNeMoy15CcoD1EatCe6fv6BI.original.fullsize.png)
+
+Nasza funkcja kosztu ma postać:
+<br>
+![image](https://cdn.mathpix.com/snip/images/ubL-P5oz1mioRJeLUncj88SoljweaZq-SqNwJRefhP4.original.fullsize.png)
 
 ### 3.  Co to jest model regresji logistycznej? W jaki sposób modeluje warunkowe prawdopodobieństwo?
 Aby zrozumieć regresję logistyczną, należy wprowadzić pojęcie ilorazu szans (odds ratio). Wyrażamy je jako stosunek prawdopodobieństwa pozytywnego zdarzenia (np. pacjent ma raka) do prawdopodobieństwa zdarzenia negatywnego:
@@ -95,9 +138,10 @@ W algorytmie stochastycznego spadku wzdłuż gradientu zbiega szybciej, poniewa�
 
 ### 9.  W jaki sposób można dodać regularyzację L2 na parametry modelu regresji logistycznej? Jaki efekt wówczas osiągniemy? Kiedy konieczne jest stosowanie regularyzacji, a kiedy nie?
 Regularyzację L2 dodajemy w następujący sposób:
+<br>
+![](https://cdn.mathpix.com/snip/images/tOWGZf-I9FI_tB769YAIBN1oS2t2vd9698jr21DA16g.original.fullsize.png)
 
-
-
+Regularyzacja polega na penalizowaniu zbyt dużych wag, przez co redukujemy overfitting. Regularyzację trzeba stosować, gdy nasz model się właśnie overfittuje. Aby dodać regularyzację należy najpierw wystandaryzować dane.
 
 ### 10.  Na czym polega procedura selekcji modelu w tym zadaniu? Jakie hiperparametry wyznaczamy? Które z nich wymagają każdorazowego nauczenia modelu, a które nie i dlaczego?
 W naszym przypadku szukamy najlepszych wag oraz najlepszej wartości progowej θ. W celu wyznaczenia najlepszych wag trenujemy modele na różnych regularyzacyjnych lambdach, a następnie dla wszystkich wytrenowanych wag sprawdzamy, dla jakiej wartości progowej θ osiągamy najlepsze rezultaty. Dla n różnych lambd i m różnych thet musimy wytrenować model tylko n razy (wartość progowa to tylko nasz sposób interpretacji wyników modelu, model ma ją gdzieś). 

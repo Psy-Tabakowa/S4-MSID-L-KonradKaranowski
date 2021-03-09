@@ -40,6 +40,7 @@ Liczymy gradient:
 Rozbijmy to na dwie części:
 <br>
 ![](https://cdn.mathpix.com/snip/images/BowbgRWMjBl205U1CGGeMiGOHD99OZ3DzFh4GA5o6ZI.original.fullsize.png)
+
 <br>
 ![](https://cdn.mathpix.com/snip/images/Zeqmm47i1XveEM8aQ0LengKS-tIL1UiM0rc3s5UUYok.original.fullsize.png)
 
@@ -97,6 +98,7 @@ Wartość progowa mówi nam od jakiego prawdopodobieństwa klasyfikujemy próbk�
 F measure to metryka służąca do oceny modelu, jest ona średnią harmoniczną dwóch wielkości: 
 * precision - mówi o tym, jak precyzyjnie nasz model wykrywa próbki pozytywne: 
 <br>
+  
 ![](https://cdn.mathpix.com/snip/images/LRJ0HBwLsWtSsMUKqms07YH12t_rDieDalwVU6GoJeI.original.fullsize.png)
   
 

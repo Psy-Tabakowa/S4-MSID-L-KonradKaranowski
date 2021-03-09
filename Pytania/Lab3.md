@@ -34,6 +34,7 @@ Nasza funkcja kosztu jest dana wzorem:
 ![](https://cdn.mathpix.com/snip/images/k3UBm7BNxePWKSsDXKrQyCkgjEJCM1o-CY4iXFSD-vE.original.fullsize.png)
 
 Liczymy gradient:
+<br>
 ![](https://cdn.mathpix.com/snip/images/SnFApz_-iZR8-nvQH2ZxjKKD4Tv1IddO0X-3ZV0rolg.original.fullsize.png)
 
 Rozbijmy to na dwie części:
@@ -43,6 +44,7 @@ Rozbijmy to na dwie części:
 ![](https://cdn.mathpix.com/snip/images/Zeqmm47i1XveEM8aQ0LengKS-tIL1UiM0rc3s5UUYok.original.fullsize.png)
 
 Całość podstawiamy do wzoru i przekształcamy:
+<br>
 ![](https://cdn.mathpix.com/snip/images/AZfJtIm6l31IataRtBVC6FPV1-cbXDXk6bRqUfs6PpA.original.fullsize.png)
 
 To jest już łatwo zapisać w postaci iloczynu macierzowego.
@@ -95,7 +97,6 @@ Wartość progowa mówi nam od jakiego prawdopodobieństwa klasyfikujemy próbk�
 F measure to metryka służąca do oceny modelu, jest ona średnią harmoniczną dwóch wielkości: 
 * precision - mówi o tym, jak precyzyjnie nasz model wykrywa próbki pozytywne: 
 <br>
-
 ![](https://cdn.mathpix.com/snip/images/LRJ0HBwLsWtSsMUKqms07YH12t_rDieDalwVU6GoJeI.original.fullsize.png)
   
 

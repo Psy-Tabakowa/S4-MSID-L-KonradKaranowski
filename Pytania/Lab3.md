@@ -27,6 +27,7 @@ Przyda się też policzona już pochodna sigmoidu:
 ![](https://cdn.mathpix.com/snip/images/Tpy-gG0RdFc9To2im0gjzYVvmoZcPduMjxXQ3vd2WnQ.original.fullsize.png)
 
 Możemy policzyć pochodną sigmoidu po wagach, korzystając z naszego poprzedniego rozwiązania:
+<br>
 ![](https://cdn.mathpix.com/snip/images/F1fbrIHNUxRs6rERMOgIZqQyoorMU75JK8hShDqGN5k.original.fullsize.png)
 
 Nasza funkcja kosztu jest dana wzorem:

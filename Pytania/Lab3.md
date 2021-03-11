@@ -132,11 +132,11 @@ Dla zbyt dużych wartości η możemy przeskakiwać nad minimum globalnym (przyk
 
 
 ### 7.  Na czym polega detekcja obiektu na zdjęciu? Dlaczego jest to problem klasyfikacji?
-Detekcja obrazu na zdjęciu polega w naszym przypadku na przejrzeniu wybranych fragmentów obrazu i zakwalifikowaniu go jako zawierającego obiekt - 1 albo nie zawierającego obiektu - 0.
+Detekcja obiektu na zdjęciu polega w naszym przypadku na przejrzeniu wybranych fragmentów obrazu i zakwalifikowaniu go jako zawierającego obiekt - 1 albo nie zawierającego obiektu - 0.
 
 
 ### 8.  Dlaczego algorytm stochastycznego gradientu prostego zbiega znacznie szybciej? Jakie jest znaczenie wielkości mini-batcha dla zbieżności algorytmu?  Jak będzie zachowywał się dla małych mini-batchy, a jak dla dużych?
-W algorytmie stochastycznego spadku wzdłuż gradientu zbiega szybciej, ponieważ wagi są częściej aktualizowane. Rozmiar mini-batcha jest ważny dla szybkości osiągnięcia zbieżoności przez algorytm oraz na ilość epok potrzebnych do osiągnięcia zbieżności. Przykładowo dla dużego batcha, będziemy aktualizować wagi rzadziej, więc algorytm będzie zbiegał wolniej, natomiast dla bardzo małych batchy, algorytm będzie zbiegać szybciej, ale wykonamy znacznie więcej obliczeń. 
+W algorytmie stochastycznego spadku wzdłuż gradientu zbiega szybciej, ponieważ wagi są częściej aktualizowane oraz unikamy minimów lokalnych. Rozmiar mini-batcha jest ważny dla szybkości osiągnięcia zbieżoności przez algorytm oraz na ilość epok potrzebnych do osiągnięcia zbieżności. Przykładowo dla dużego batcha, będziemy aktualizować wagi rzadziej, więc algorytm będzie zbiegał wolniej, natomiast dla bardzo małych batchy, algorytm będzie zbiegać szybciej, ale wykonamy znacznie więcej obliczeń. 
 
 
 ### 9.  W jaki sposób można dodać regularyzację L2 na parametry modelu regresji logistycznej? Jaki efekt wówczas osiągniemy? Kiedy konieczne jest stosowanie regularyzacji, a kiedy nie?

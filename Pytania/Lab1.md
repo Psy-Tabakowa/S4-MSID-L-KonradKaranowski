@@ -99,7 +99,7 @@ Dane dzielimy najczęściej na trzy zbiory:
 
 Podział na te trzy ciągi jest bardzo istotny, ponieważ pozwala nam oceniać skuteczność naszego modelu (przykładowo, jeżeli model ma 90% skuteczności dla danych treningowych, ale 40% dla danych testowych, to wiemy, że występuje overfitting). Dzięki danym walidacyjnym możemy patrzeć na bieżąco w trakcie trenowania czy nasz algorytm rzeczywiście się uczy (to przydaje się szczególnie przy trenowaniu głębokich sieci neuronowych o wielu milionach parametrów). Często stosowaną regułą przy dzieleniu danych na ciągi jest podzielenie na dane treningowe i testowe w proporcjach 80/20, a następnie wydzielenie 20% danych walidacyjnych ze zbioru treningowego.
 
-### 6. Co  to  jest  selekcja  modelu?  W  jaki  sposób  się  ją  wykonuje?  Czy  miara  oceniająca  model może być inna od kryterium uczenia?
+### 6. Co to jest selekcja modelu?  W jaki sposób się ją wykonuje?  Czy miara oceniająca model może być inna od kryterium uczenia?
 Selekcja modelu polega na stworzeniu kilku modeli z różnymi hiperparametrami i wybraniu najlepszego. Kryterium może być inne np. przy klasyfikacji zamiast accuracy użyjemy F1 score.
 
 ### 7. Które z podejść do selekcji modelu jest prostsze do zastosowania w praktyce i dlaczego?

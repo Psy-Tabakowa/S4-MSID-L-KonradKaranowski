@@ -31,7 +31,7 @@ Liczymy pochodną z tej funkcji:
 <br>
 ![](https://cdn.mathpix.com/snip/images/wU41HTzPxyDnHpSZN8gxnw7Hcny3ARIiX1qBx05KMlY.original.fullsize.png)
 
-Przyr:
+Przyrównujemy do zera i przekształcamy:
 <br>
 ![image](https://cdn.mathpix.com/snip/images/BVaKpHWkfIWfYUCVqW4VXU31PqhpbyugSHGDgIk3tYE.original.fullsize.png)
 

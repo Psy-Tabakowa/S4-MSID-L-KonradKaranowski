@@ -3,6 +3,38 @@
 
 
 ### 1.  Proszę wyznaczyć estymator największej wiarygodności dla rozkładu wielopunktowego.
+Parametry theta muszą spełniać następującą właściwość:
+<br>
+![](https://cdn.mathpix.com/snip/images/6PK4NKJztYKbWMH9h-cKMPwA3qcGODP_bPJ-GV4-MnQ.original.fullsize.png)
+
+Funkcja wiarygodności ma postać:
+<br>
+![](https://cdn.mathpix.com/snip/images/ms5BhYehRcFLpmwSslC0DeEr_PGftaNuUj_4u6oofjE.original.fullsize.png)
+
+Logarytmujemy stronami:
+<br>
+![](https://cdn.mathpix.com/snip/images/um68ipM9zYMAA-26DlOT6gbNO2_uuv73R6xQe7FpBQI.original.fullsize.png)
+
+Liczymy gradient naszej logarytmowanej funkcji wiarygodności:
+<br>
+![](https://cdn.mathpix.com/snip/images/gCudG_mw1HQtYiXcTMTNBKt5X0Q5KZGXb2WbBLy08sM.original.fullsize.png)
+
+Liczymy gradient parametrów:
+<br>
+![](https://cdn.mathpix.com/snip/images/502G8pHdklWF0k0bQLOzvaky6BWxy3SdAzqI_dgAKhM.original.fullsize.png)
+
+Zauważamy, że wektory są proporcjonalne i korzystamy z metody mnożników Lagrange'a:
+<br>
+![](https://cdn.mathpix.com/snip/images/TYu8Tg3gEwGFAmWrVzKFY27U49KCUTpfJUxXppWB5gY.original.fullsize.png)
+
+Rozwiązujemy układ równań:
+<br>
+![](https://cdn.mathpix.com/snip/images/nCOB8n6Y--Eo96fohdEPQ0ffgUZucxS0BjoJh-ewuIQ.original.fullsize.png)
+
+Otrzymujemy wynik:
+<br>
+![](https://cdn.mathpix.com/snip/images/IU58c7BK3X5ofrDJhP6oam8zeHrdB_CAm0alBXm3ga0.original.fullsize.png)
+
 
 
 ### 2.  Proszę wyznaczyć estymator największej wiarygodności dla rozkładu dwupunktowego.

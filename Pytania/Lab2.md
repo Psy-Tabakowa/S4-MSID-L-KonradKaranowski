@@ -103,10 +103,13 @@ Zakładamy, że rozkład p(θ) jest rozkładem Beta (bo tak jest w zadaniu):
 Funkcja wiarygodności ma postać:
 <br>
 ![](https://cdn.mathpix.com/snip/images/C3Y5Ys5CsFH5CKKK4w48uqOnqnhPSRLoJly19AWJtRQ.original.fullsize.png)
+<br>
+![](https://cdn.mathpix.com/snip/images/dYv6anLRKxBF5BSup79r_OvpzeUUUx8j9gSD1oqAN3w.original.fullsize.png)
 
 Logarytmujemy stronami:
 <br>
-![](https://cdn.mathpix.com/snip/images/dYv6anLRKxBF5BSup79r_OvpzeUUUx8j9gSD1oqAN3w.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/lHnzp6ezzfcwxMUNcqw1Nk3KKR_iEgDepBbAIixmv14.original.fullsize.png)
+
 
 Liczymy pochodną:
 <br>

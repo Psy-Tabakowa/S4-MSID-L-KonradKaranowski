@@ -29,7 +29,7 @@ Zauważamy, że wektory są proporcjonalne i korzystamy z metody mnożników Lag
 
 Rozwiązujemy układ równań:
 <br>
-![](https://cdn.mathpix.com/snip/images/nCOB8n6Y--Eo96fohdEPQ0ffgUZucxS0BjoJh-ewuIQ.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/cLrhtNfLEXas63UKbrTZwX2WQLRKCQOwxoSyVfnirKA.original.fullsize.png)
 
 Otrzymujemy wynik:
 <br>

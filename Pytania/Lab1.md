@@ -27,9 +27,9 @@ Zapiszmy to ładniej i trzymajmy się tego:
 <br>
 ![image](https://cdn.mathpix.com/snip/images/xqNV8dzOY9W_cGK77H1MoarACe38ddy5B9Bm7oqaIQs.original.fullsize.png)
 
-Będzimy też korzystać z następujących wzorów na pochodne:
+Będzimy też korzystać z następujących wzorów na gradienty:
 <br>
-![image](https://cdn.mathpix.com/snip/images/PUzxY1boz_Ht1iUMg3YHJJQwWd6SW1yv4auC0RHWAy8.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/gXa1fF4HmeZBEOXYTrsEytPX2JM3Fu82-eHid9P_jAE.original.fullsize.png)
 
 ### 1. Proszę wyznaczyć rozwiązanie liniowego zadania najmniejszych kwadratów.
 Zdefiniujmy sobie naszą funkcję kosztu:
@@ -44,13 +44,9 @@ Rozpiszmy to sobie bardziej:
 <br>
 ![image](https://cdn.mathpix.com/snip/images/JUeCicZ0zxGnykHZ7qn6dLtCNNeTstUXSdUKBUNs0R8.original.fullsize.png)
 
-Liczymy sobie pochodną funkcji kosztu po wektorze wag i przyrównujemy ją do zera:
+Liczymy sobie gradient funkcji kosztu po wektorze wag i przyrównujemy do ziobry:
 <br>
-![image](https://cdn.mathpix.com/snip/images/UDhV4sKOJDzMnt0ANkqLdJJkkvg0b1SI0pof04qOgKs.original.fullsize.png)
-
-Otrzymujemy następujący wzór:
-<br>
-![image](https://cdn.mathpix.com/snip/images/lt1gs7ZT0Ig4TqhAR-flIIm0CwBw-CnLGaJP6Et98zM.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/K3GnL5_A6uEJ-7-RCGiexvSLcTkc4n4IkR4WGMJJdzM.original.fullsize.png)
 
 Przekształcamy równanie do postaci:
 <br>
@@ -69,9 +65,9 @@ Dokonujemy analogicznych przekształceń co w poprzednim przykładzie:
 <br>
 ![image](https://cdn.mathpix.com/snip/images/aENFncXLFe1M_NxYOSPJS7MtgLjxSqpoQJmVHhgiwm4.original.fullsize.png)
 
-Liczymy pochodną:
+Liczymy gradient:
 <br>
-![image](https://cdn.mathpix.com/snip/images/liZpidIPA5sp4faHvexAr_Ud9ynSA6MWCx2khItYFT0.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/MFdiv7-fcQFpSTCCS-TkQId5L72VgPYO7D-ojlT3xVQ.original.fullsize.png)
 
 Przekształcamy:
 <br>

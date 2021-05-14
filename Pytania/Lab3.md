@@ -20,51 +20,53 @@ Otrzymujemy ostateczną postać:
 Na początku bez regularyzacji:
 Wprowadźmy sobie oznaczenie, które pomoże nam uczynić rachunki bardziej czytelnymi:
 <br>
-![](https://cdn.mathpix.com/snip/images/5Lo185sozr0wc9FP6B-g3KOkQhZgHkweKZYnAmO1zJ4.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/rPuiU7Bf2Coispmo7pe_RlQBXN-NNwEi-82A6RSqzlU.original.fullsize.png)
 
 Przyda się też policzona już pochodna sigmoidu:
 <br>
 ![](https://cdn.mathpix.com/snip/images/Tpy-gG0RdFc9To2im0gjzYVvmoZcPduMjxXQ3vd2WnQ.original.fullsize.png)
 
-Możemy policzyć pochodną sigmoidu po wagach, korzystając z naszego poprzedniego rozwiązania:
+Możemy policzyć pochodną cząstkową sigmoidu po j-tej wadze, korzystając z naszego poprzedniego rozwiązania:
 <br>
-![](https://cdn.mathpix.com/snip/images/F1fbrIHNUxRs6rERMOgIZqQyoorMU75JK8hShDqGN5k.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/y0OOVz7NaUySL9UUlRjLw3p2YxQjrzwIvt4F361AGOc.original.fullsize.png)
 
 Nasza funkcja kosztu jest dana wzorem:
 <br>
 ![](https://cdn.mathpix.com/snip/images/k3UBm7BNxePWKSsDXKrQyCkgjEJCM1o-CY4iXFSD-vE.original.fullsize.png)
 
-Liczymy gradient:
+Liczymy podchodną cząstkową po j-tej wadze:
 <br>
-![](https://cdn.mathpix.com/snip/images/SnFApz_-iZR8-nvQH2ZxjKKD4Tv1IddO0X-3ZV0rolg.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/JSF2aS_xReVZQePBQLs68g29pD8zar1H0J8nGW0AISE.original.fullsize.png)
 
 Rozbijmy to na dwie części:
 <br>
-![](https://cdn.mathpix.com/snip/images/BowbgRWMjBl205U1CGGeMiGOHD99OZ3DzFh4GA5o6ZI.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/KmHtjxYzzwKjiwkYFUEAuXyHj3C1qrAf8s6L6M90RiA.original.fullsize.png)
 <br>
-![](https://cdn.mathpix.com/snip/images/Zeqmm47i1XveEM8aQ0LengKS-tIL1UiM0rc3s5UUYok.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/K_oxjHh3rp1KZgqnOvNhfmwG4J3U4xiX0jMcMhIYiCQ.original.fullsize.png)
 
 Całość podstawiamy do wzoru i przekształcamy:
 <br>
-![](https://cdn.mathpix.com/snip/images/AZfJtIm6l31IataRtBVC6FPV1-cbXDXk6bRqUfs6PpA.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/VLaP_VzpSKIeXRrsKsa5IQ4e_3D36AeBPWOVxczR9cg.original.fullsize.png)
 
-To jest już łatwo zapisać w postaci iloczynu macierzowego.
+Gradient to już se każdy zapisze i przekształci.
 
 Dla regresji z regularyzacją funkcja kosztu wygląda następująco:
 <br>
 ![](https://cdn.mathpix.com/snip/images/tOWGZf-I9FI_tB769YAIBN1oS2t2vd9698jr21DA16g.original.fullsize.png)
 
-Gradient możemy policzyć w następujący spos:
+Liczymy pochodną cząstkową po j-tej wadze:
 <br>
-![image](https://cdn.mathpix.com/snip/images/xze7Sme7JjDV1_0lBr4T13BDFEUclAO5SgQPtWinSTo.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/E15QFV7NidpHDmVXF9nQMjLvTlLPcFIiNNwGfa9Vovw.original.fullsize.png)
 
 Wprowadźmy oznaczenie:
 <br>
 ![image](https://cdn.mathpix.com/snip/images/K1qCjAlytlg6ZeuMq-jKNeMoy15CcoD1EatCe6fv6BI.original.fullsize.png)
 
-Nasza funkcja kosztu ma postać:
+Wynik:
 <br>
-![image](https://cdn.mathpix.com/snip/images/ubL-P5oz1mioRJeLUncj88SoljweaZq-SqNwJRefhP4.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/qCHBYtHfZG-zSpElZ5frrT0ETebrpvtWbEOEl9WTy5I.original.fullsize.png)
+
+To się da łatwo przekształcić do gradientu.
 
 ### 3.  Co to jest model regresji logistycznej? W jaki sposób modeluje warunkowe prawdopodobieństwo?
 Aby zrozumieć regresję logistyczną, należy wprowadzić pojęcie ilorazu szans (odds ratio). Wyrażamy je jako stosunek prawdopodobieństwa pozytywnego zdarzenia (np. pacjent ma raka) do prawdopodobieństwa zdarzenia negatywnego:
